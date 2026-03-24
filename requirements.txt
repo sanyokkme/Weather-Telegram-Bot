@@ -1,0 +1,4 @@
+aiogram==3.26.0
+requests==2.32.5
+requests-toolbelt==1.0.0
+python-dotenv==1.2.1
