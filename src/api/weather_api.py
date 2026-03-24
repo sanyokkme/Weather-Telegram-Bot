@@ -157,7 +157,7 @@ def _parse_weather_response(payload: object) -> WeatherResponse:
 
 
 def get_weather(location: str) -> WeatherResponse:
-    url = f"http://api.weatherapi.com/v1/current.json?key={Config.WEATHER_API_KEY}&q={location}&lang=uk"
+    url = f"http://api.weatherapi.com/v1/current.json?key={Config.WEATHER_API_KEY}&q={location}&lang=en"
 
     response = requests.get(url)
     response.raise_for_status()
@@ -165,7 +165,7 @@ def get_weather(location: str) -> WeatherResponse:
 
 
 def get_weather_by_coordinates(lat: float, lon: float) -> WeatherResponse:
-    url = f"http://api.weatherapi.com/v1/current.json?key={Config.WEATHER_API_KEY}&q={lat},{lon}&lang=uk"
+    url = f"http://api.weatherapi.com/v1/current.json?key={Config.WEATHER_API_KEY}&q={lat},{lon}&lang=en"
 
     response = requests.get(url)
     response.raise_for_status()
